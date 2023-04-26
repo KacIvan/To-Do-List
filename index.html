@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <nav>
+        <span><i class="fa fa-sun-o" aria-hidden="true"></i></span>
+        <label class="switch">
+            <input type="checkbox" id="toggle-theme">
+            <span class="slider round"></span>
+        </label>
+        <span><i class="fa fa-moon-o" aria-hidden="true"></i></span>
+    </nav>
+    <header>
+        <h1>To Do List</h1>
+    </header>
+    <div class="error-message">
+        <div class="pop-up" id="error">
+            Укажите описание для задачи!
+        </div>
+    </div>
+    <form action="post">
+        <input type="text" class="todo-input" placeholder="Новая задача"
+            title="Опишите вашу задачу здесь. Например: &laquoПогулять с собакой&raquo." required>
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-circle fa-lg"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all" selected>Все</option>
+                <option value="completed">Завершено</option>
+                <option value="incomplete">В процессе</option>
+            </select>
+        </div>
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/949dfce462.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
